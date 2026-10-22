@@ -1,5 +1,10 @@
 package bank;
 
+/**
+ * Main
+ * Demonstrates the polymorphism (upcasting) and invokes functions. 
+ */
+
 public class Main {
     public static void main(String[] args) {
         // Test Case 1 

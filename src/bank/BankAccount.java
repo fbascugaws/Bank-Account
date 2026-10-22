@@ -1,5 +1,11 @@
 package bank;
 
+/**
+ * BankAccount
+ * BankAccount class represents a bank account with basic functionalities:
+ * depositing, withdrawing, and account freezing.
+ */
+
 public class BankAccount {
     // Fields
     private double balance;
