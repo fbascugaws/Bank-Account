@@ -3,6 +3,8 @@ package bank;
 /**
  * Main
  * Demonstrates the polymorphism (upcasting) and invokes functions. 
+ * 
+ * @author Felisa Bascug
  */
 
 public class Main {
