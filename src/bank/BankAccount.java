@@ -19,13 +19,12 @@ public class BankAccount {
             return;
         } 
         
-        System.out.println("Amount deposited:\n" + amount);
+        System.out.printf("Amount deposited: %.2f\n", amount);
         if (amount <= 0) {
             System.out.println("Invalid amount. Must be greater than 0.");
-            System.out.println("Unable to transact.");
         } else {
             balance += amount;
-            System.out.println("Current balance:\n" + balance);
+            System.out.printf("Current balance: %.2f\n", balance);
         }
     }
 
@@ -36,17 +35,16 @@ public class BankAccount {
             return;
         } 
         
-        System.out.println("Amount withdrawn:\n" + amount);
+        System.out.printf("Amount withdrawn: %.2f\n", amount);
         if (amount <= 0) {
             System.out.println("Invalid amount. Must be greater than 0.");
-            System.out.println("Unable to transact.");
+            return;
         } else if (amount > balance) {
             System.out.println("Insufficient balance.");
-            System.out.println("Unable to transact.");
         } else {
             balance -= amount;
-            System.out.println("Current balance:\n" + balance);
         }
+        System.out.printf("Current balance: %.2f\n", balance);
     }
 
     public double getBalance() {
