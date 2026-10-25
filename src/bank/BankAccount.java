@@ -12,7 +12,7 @@ import java.util.*;
 
 public class BankAccount {
     private double balance;
-    private boolean isFrozen; 
+    private boolean isFrozen;
     private List<Transaction> transactionHistory;
 
     /**
@@ -28,6 +28,7 @@ public class BankAccount {
 
     /**
      * Deposits money into the account.
+     * 
      * @param amount the amount to deposit
      */
     public void deposit(double amount) {
@@ -35,8 +36,8 @@ public class BankAccount {
             System.out.println("Account is FROZEN.");
             System.out.println("Unable to transact.");
             return;
-        } 
-        
+        }
+
         System.out.printf("Amount deposited: %.2f\n", amount);
         if (amount <= 0) {
             System.out.println("Invalid amount. Must be greater than 0.");
@@ -49,6 +50,7 @@ public class BankAccount {
 
     /**
      * Withdraws money from the account.
+     * 
      * @param amount the amount to withdraw
      */
     public void withdraw(double amount) {
@@ -56,8 +58,8 @@ public class BankAccount {
             System.out.println("Account is FROZEN.");
             System.out.println("Unable to transact.");
             return;
-        } 
-        
+        }
+
         System.out.printf("Amount withdrawn: %.2f\n", amount);
         if (amount <= 0) {
             System.out.println("Invalid amount. Must be greater than 0.");
@@ -73,6 +75,7 @@ public class BankAccount {
 
     /**
      * Returns the current balance of the account.
+     * 
      * @return the current balance
      */
     public double getBalance() {
@@ -81,6 +84,7 @@ public class BankAccount {
 
     /**
      * Returns the transaction history of the account.
+     * 
      * @return a list of transactions
      */
     public List<Transaction> getTransactionHistory() {
@@ -103,6 +107,7 @@ public class BankAccount {
 
     /**
      * Checks if the account is frozen.
+     * 
      * @return true if the account is frozen, false otherwise
      */
     public boolean isFrozen() {

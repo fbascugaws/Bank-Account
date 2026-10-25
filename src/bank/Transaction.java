@@ -1,10 +1,12 @@
 package bank;
 
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 /**
  * Transaction
- * Transaction class represents a bank transaction with details such as type, amount, and timestamp.
+ * Transaction class represents a bank transaction with details such as type,
+ * amount, and timestamp.
  * 
  * @author Felisa Bascug
  */
@@ -16,7 +18,8 @@ public class Transaction {
 
     /**
      * Constructor for Transaction that initializes the type, amount, and timestamp.
-     * @param type the type of transaction (e.g., "Deposit", "Withdrawal")
+     * 
+     * @param type   the type of transaction (e.g., "Deposit", "Withdrawal")
      * @param amount the amount involved in the transaction
      */
     public Transaction(String type, double amount) {
@@ -27,11 +30,19 @@ public class Transaction {
 
     /**
      * Returns a string representation of the transaction.
-     * @return a string containing the type, amount, and timestamp of the transaction
+     * 
+     * @return a string containing the type, amount, and timestamp of the
+     *         transaction
      */
     @Override
     public String toString() {
-        return String.format("Transaction[type=%s, amount=%.2f, timestamp=%s]", type, amount, timestamp);
+        // Format Date
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        String formatted = timestamp.format(formatter);
+
+        // return String.format("Transaction[type=%s, amount=%.3f, timestamp=%s]", type,
+        // amount, formatted);
+        return "Transaction[type=" + type + ", amount=" + amount + ", timestamp=" + formatted + "]";
     }
 
 }

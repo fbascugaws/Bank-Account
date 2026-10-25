@@ -1,8 +1,11 @@
 package bank;
 
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+
 /**
  * Main
- * Demonstrates the polymorphism (upcasting) and invokes functions. 
+ * Demonstrates the polymorphism (upcasting) and invokes functions.
  * 
  * @author Felisa Bascug
  */
@@ -11,10 +14,11 @@ public class Main {
     public static void main(String[] args) {
         // EXERCISE 1
         System.out.println("=== EXERCISE 1 TEST CASES ===");
-        
-        // 1 
+
+        // 1
         System.out.println("Test Case 1");
         BankAccount acc1 = new SavingsAccount("Test0");
+        System.out.println("Account Owner: " + ((SavingsAccount) acc1).getOwnerName() + ".");
 
         // 2
         System.out.println("\nTest Case 2");
@@ -56,25 +60,28 @@ public class Main {
 
         // EXERCISE 2
         System.out.println("\n=== EXERCISE 2 TEST CASES ===");
-        
+
         // 1
         System.out.println("Test Case 1");
-        acc1.getTransactionHistory();
-        
+        System.out.println("Transaction history:");
+        for (Transaction t : acc1.getTransactionHistory()) {
+            System.out.println(t);
+        }
+
         // 2
-        System.out.println("Test Case 2");
+        System.out.println("\nTest Case 2");
         BankAccountManager accM1 = new BankAccountManager();
-        
+
         // 3
-        System.out.println("Test Case 3");
+        System.out.println("\nTest Case 3");
         accM1.addAccount(acc1);
-        
+
         // 4
-        System.out.println("Test Case 4");
+        System.out.println("\nTest Case 4");
         accM1.addAccount(new SavingsAccount("Test1"));
-        
+
         // 5
-        System.out.println("Test Case 5");
+        System.out.println("\nTest Case 5");
         accM1.listAccounts();
 
     }
