@@ -85,5 +85,28 @@ public class Main {
         System.out.println("\nTest Case 5");
         accM1.listAccounts();
 
+        // EXERCISE 3
+        System.out.println("\n=== EXERCISE 3 TEST CASES ===");
+        
+        // 1
+        System.out.println("Test Case 1");
+
+        // 2
+        System.out.println("\nTest Case 2");
+
+        // 3
+        System.out.println("\nTest Case 3");
+
+        // 4
+        System.out.println("\nTest Case 4");
+        
+        // 5
+        System.out.println("\nTest Case 5");
+
+        // 6
+        System.out.println("\nTest Case 6");
+
+        // 7
+        System.out.println("\nTest Case 7");
     }
 }

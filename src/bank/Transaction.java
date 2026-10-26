@@ -30,6 +30,14 @@ public class Transaction {
     }
 
     /**
+     * TODO
+     * @return
+     */
+    public double getAmount() {
+        return amount;
+    }
+
+    /**
      * Returns a string representation of the transaction.
      * 
      * @return a string containing the type, amount, and timestamp of the

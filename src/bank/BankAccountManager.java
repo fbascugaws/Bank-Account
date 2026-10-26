@@ -63,4 +63,27 @@ public class BankAccountManager implements Bank {
                             String.format("%.2f", a.getBalance()));
         }
     }
+
+    /** 
+     * Filters transactions above or equal to the specified amount
+     * using a lambda expression.
+     * 
+     * @param amount filter reference amount
+     * @param txList list of transactions to be filtered
+     */
+    List<Transaction> filterTransactionsAtOrAbove(double amount, List<Transaction> txList) {
+        return txList.stream()
+                .filter((tr) -> tr.getAmount() >= amount)
+                .toList();
+    }
+
+    /**
+     * Sorts transactions by amount in ascending order
+     * using a lambda expression.
+     * 
+     * @param txList list of transactions to be sorted
+     */
+    List<Transaction> sortTransactionsByAmount(List<Transaction> txList) {
+        return 
+    }
 }
