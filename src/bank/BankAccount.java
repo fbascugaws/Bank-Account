@@ -32,7 +32,7 @@ public class BankAccount {
      * @param amount the amount to deposit
      */
     public void deposit(double amount) {
-        if (isFrozen) {
+        if (isFrozen()) {
             System.out.println("Account is FROZEN.");
             System.out.println("Unable to transact.");
             return;
@@ -54,7 +54,7 @@ public class BankAccount {
      * @param amount the amount to withdraw
      */
     public void withdraw(double amount) {
-        if (isFrozen) {
+        if (isFrozen()) {
             System.out.println("Account is FROZEN.");
             System.out.println("Unable to transact.");
             return;

@@ -71,6 +71,9 @@ public class Main {
         // 2
         System.out.println("\nTest Case 2");
         BankAccountManager accM1 = new BankAccountManager();
+        if (accM1 != null) {
+            System.out.println("Bank Account Manager created");
+        }
 
         // 3
         System.out.println("\nTest Case 3");
