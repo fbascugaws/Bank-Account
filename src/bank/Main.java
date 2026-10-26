@@ -90,23 +90,32 @@ public class Main {
         
         // 1
         System.out.println("Test Case 1");
+        acc1.deposit(-500);
 
         // 2
         System.out.println("\nTest Case 2");
+        acc1.freezeAccount();
+        acc1.deposit(11500);
 
         // 3
         System.out.println("\nTest Case 3");
+        acc1.withdraw(-100);
 
         // 4
         System.out.println("\nTest Case 4");
+        acc1.withdraw(1500);
         
         // 5
         System.out.println("\nTest Case 5");
+        acc1.freezeAccount();
+        acc1.withdraw(500);
 
         // 6
         System.out.println("\nTest Case 6");
+        accM1.filterTransactionsAtOrAbove(200, acc1.getTransactionHistory());
 
         // 7
         System.out.println("\nTest Case 7");
+        accM1.sortTransactionsByAmount(acc1.getTransactionHistory());
     }
 }
