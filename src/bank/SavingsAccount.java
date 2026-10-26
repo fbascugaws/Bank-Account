@@ -2,8 +2,8 @@ package bank;
 
 /**
  * SavingsAccount
- * Child class of BankAccount representing a savings account with additional
- * functionality: initializing account owner.
+ * Child class of BankAccount representing a savings account 
+ * with additional functionality: initializing account owner.
  * 
  * @author Felisa Bascug
  */

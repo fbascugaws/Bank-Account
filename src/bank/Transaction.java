@@ -17,7 +17,8 @@ public class Transaction {
     private LocalDateTime timestamp;
 
     /**
-     * Constructor for Transaction that initializes the type, amount, and timestamp.
+     * Constructor for Transaction that initializes the type, amount, 
+     * and timestamp.
      * 
      * @param type   the type of transaction (e.g., "Deposit", "Withdrawal")
      * @param amount the amount involved in the transaction
@@ -37,10 +38,12 @@ public class Transaction {
     @Override
     public String toString() {
         // Format Date
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        DateTimeFormatter formatter = DateTimeFormatter.
+                ofPattern("yyyy-MM-dd HH:mm");
         String formatted = timestamp.format(formatter);
 
-        return "Transaction[type=" + type + ", amount=" + amount + ", timestamp=" + formatted + "]";
+        return "Transaction[type=" + type + ", amount=" + amount + 
+                ", timestamp=" + formatted + "]";
     }
 
 }

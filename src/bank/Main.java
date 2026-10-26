@@ -15,7 +15,8 @@ public class Main {
         // 1
         System.out.println("Test Case 1");
         BankAccount acc1 = new SavingsAccount("Test0");
-        System.out.println("Account Owner: " + ((SavingsAccount) acc1).getOwnerName() + ".");
+        System.out.println("Account Owner: " + ((SavingsAccount) acc1)
+            .getOwnerName() + ".");
 
         // 2
         System.out.println("\nTest Case 2");

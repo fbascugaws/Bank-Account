@@ -4,8 +4,8 @@ import java.util.*;
 
 /**
  * BankAccountManager
- * Allows a bank account transaction, withdraw or deposit, amount, and the time
- * stamp to be recorded using List.
+ * Allows a bank account transaction, withdraw or deposit, amount, 
+ * and the time stamp to be recorded using List.
  * 
  * @author Felisa Bascug
  */
@@ -50,15 +50,16 @@ public class BankAccountManager implements Bank {
     }
 
     /**
-     * Display all bank accounts (ID and owner’s name) stored in the system along
-     * with their balances.
+     * Display all bank accounts (ID and owner’s name) stored in the system
+     * along with their balances.
      */
     public void listAccounts() {
         for (int i = 0; i < accounts.size(); i++) {
             SavingsAccount a = (SavingsAccount) getAccount(i);
             System.out.println(
-                    "Account ID: " + i + ", Account Name: " + a.getOwnerName() + ", Balance: "
-                            + String.format("%.2f", a.getBalance()));
+                    "Account ID: " + i + ", Account Name: " + 
+                            a.getOwnerName() + ", Balance: " + 
+                            String.format("%.2f", a.getBalance()));
         }
     }
 }
