@@ -40,8 +40,6 @@ public class Transaction {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
         String formatted = timestamp.format(formatter);
 
-        // return String.format("Transaction[type=%s, amount=%.3f, timestamp=%s]", type,
-        // amount, formatted);
         return "Transaction[type=" + type + ", amount=" + amount + ", timestamp=" + formatted + "]";
     }
 

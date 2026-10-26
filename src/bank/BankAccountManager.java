@@ -6,6 +6,8 @@ import java.util.*;
  * BankAccountManager
  * Allows a bank account transaction, withdraw or deposit, amount, and the time
  * stamp to be recorded using List.
+ * 
+ * @author Felisa Bascug
  */
 
 public class BankAccountManager implements Bank {
@@ -38,6 +40,9 @@ public class BankAccountManager implements Bank {
 
     /**
      * Returns the account of a specific id.
+     * 
+     * @param id the id of the account being requested
+     * @return the BankAccount instance of the account being requested
      */
     @Override
     public BankAccount getAccount(int id) {

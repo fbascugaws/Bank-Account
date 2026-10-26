@@ -1,8 +1,5 @@
 package bank;
 
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
-
 /**
  * Main
  * Demonstrates the polymorphism (upcasting) and invokes functions.
