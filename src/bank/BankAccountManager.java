@@ -13,6 +13,7 @@ import java.util.*;
 public class BankAccountManager implements Bank {
     private Map<Integer, BankAccount> accounts;
     private int id;
+    private int MAXIMUM_ACCOUNT_LIMIT = 100;
 
     /**
      * Constructor for BankAccountManager that initializes accounts and id.
@@ -28,7 +29,7 @@ public class BankAccountManager implements Bank {
      */
     @Override
     public void addAccount(BankAccount account) {
-        if (id >= 100) {
+        if (id >= MAXIMUM_ACCOUNT_LIMIT) {
             System.out.println("Account creation limit reached.");
             return;
         }
