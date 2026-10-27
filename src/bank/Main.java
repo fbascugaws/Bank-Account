@@ -13,7 +13,8 @@ import exception.InvalidAmountException;
 
 public class Main {
     public static void main(String[] args)
-            throws InvalidAmountException, InsufficientFundsException, AccountFrozenException {
+            throws InvalidAmountException, InsufficientFundsException, 
+            AccountFrozenException {
         // EXERCISE 1
         System.out.println("=== EXERCISE 1 TEST CASES ===");
 
@@ -66,10 +67,8 @@ public class Main {
 
         // 1
         System.out.println("Test Case 1");
-        System.out.println("Transaction history:");
-        for (Transaction t : acc1.getTransactionHistory()) {
-            System.out.println(t);
-        }
+        String header = "Transaction history:";
+        acc1.printTransactions(header, acc1.getTransactionHistory());
 
         // 2
         System.out.println("\nTest Case 2");
@@ -101,6 +100,7 @@ public class Main {
         System.out.println("\nTest Case 2");
         acc1.freezeAccount();
         acc1.deposit(11500);
+        acc1.unfreezeAccount();
 
         // 3
         System.out.println("\nTest Case 3");
@@ -117,10 +117,15 @@ public class Main {
 
         // 6
         System.out.println("\nTest Case 6");
-        System.out.println(accM1.filterTransactionsAtOrAbove(200, acc1.getTransactionHistory()));
+        int amount = 200;
+        header = "Filtering transactions at or above " + amount + "...";
+        acc1.printTransactions(header, accM1.filterTransactionsAtOrAbove
+            (amount, acc1.getTransactionHistory()));
 
         // 7
         System.out.println("\nTest Case 7");
-        System.out.println(accM1.sortTransactionsByAmount(acc1.getTransactionHistory()));
+        header = "Sorting transactions by amount...";
+        acc1.printTransactions(header, accM1.sortTransactionsByAmount
+            (acc1.getTransactionHistory()));
     }
 }

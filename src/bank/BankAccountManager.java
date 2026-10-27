@@ -72,7 +72,8 @@ public class BankAccountManager implements Bank {
      * @param txList list of transactions to be filtered
      * @return the filtered list of transactions
      */
-    List<Transaction> filterTransactionsAtOrAbove(double amount, List<Transaction> txList) {
+    public List<Transaction> filterTransactionsAtOrAbove(double amount, 
+        List<Transaction> txList) {
         return txList.stream()
                 .filter((tr) -> tr.getAmount() >= amount)
                 .toList();
@@ -85,7 +86,8 @@ public class BankAccountManager implements Bank {
      * @param txList list of transactions to be sorted
      * @return the sorted list of transactions
      */
-    List<Transaction> sortTransactionsByAmount(List<Transaction> txList) {
+    public List<Transaction> sortTransactionsByAmount
+        (List<Transaction> txList) {
         return txList.stream()
                 .sorted(Comparator.comparing(tx -> tx.getAmount()))
                 .toList();
