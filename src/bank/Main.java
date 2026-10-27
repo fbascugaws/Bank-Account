@@ -1,5 +1,9 @@
 package bank;
 
+import exception.AccountFrozenException;
+import exception.InsufficientFundsException;
+import exception.InvalidAmountException;
+
 /**
  * Main
  * Demonstrates the polymorphism (upcasting) and invokes functions.
@@ -8,7 +12,8 @@ package bank;
  */
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+            throws InvalidAmountException, InsufficientFundsException, AccountFrozenException {
         // EXERCISE 1
         System.out.println("=== EXERCISE 1 TEST CASES ===");
 
@@ -16,7 +21,7 @@ public class Main {
         System.out.println("Test Case 1");
         BankAccount acc1 = new SavingsAccount("Test0");
         System.out.println("Account Owner: " + ((SavingsAccount) acc1)
-            .getOwnerName() + ".");
+                .getOwnerName() + ".");
 
         // 2
         System.out.println("\nTest Case 2");
@@ -87,7 +92,7 @@ public class Main {
 
         // EXERCISE 3
         System.out.println("\n=== EXERCISE 3 TEST CASES ===");
-        
+
         // 1
         System.out.println("Test Case 1");
         acc1.deposit(-500);
@@ -104,7 +109,7 @@ public class Main {
         // 4
         System.out.println("\nTest Case 4");
         acc1.withdraw(1500);
-        
+
         // 5
         System.out.println("\nTest Case 5");
         acc1.freezeAccount();
@@ -112,10 +117,10 @@ public class Main {
 
         // 6
         System.out.println("\nTest Case 6");
-        accM1.filterTransactionsAtOrAbove(200, acc1.getTransactionHistory());
+        System.out.println(accM1.filterTransactionsAtOrAbove(200, acc1.getTransactionHistory()));
 
         // 7
         System.out.println("\nTest Case 7");
-        accM1.sortTransactionsByAmount(acc1.getTransactionHistory());
+        System.out.println(accM1.sortTransactionsByAmount(acc1.getTransactionHistory()));
     }
 }
