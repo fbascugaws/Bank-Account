@@ -1,7 +1,10 @@
 package bank;
 
-import java.util.*;
-import exception.*;
+import java.util.ArrayList;
+import java.util.List;
+import exception.AccountFrozenException;
+import exception.InsufficientFundsException;
+import exception.InvalidAmountException;
 
 /**
  * BankAccount
@@ -36,7 +39,7 @@ public class BankAccount {
 
     /**
      * Deposits money into the account.
-     * 
+     *
      * @param amount the amount to deposit
      */
     public void deposit(double amount) 

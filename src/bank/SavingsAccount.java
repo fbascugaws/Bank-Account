@@ -24,7 +24,7 @@ public class SavingsAccount extends BankAccount {
     /**
      * Returns the name of the account owner.
      * 
-     * @return
+     * @return the account owner 
      */
     public String getOwnerName() {
         return ownerName;

@@ -1,6 +1,9 @@
 package bank;
 
-import java.util.*;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * BankAccountManager
@@ -19,7 +22,7 @@ public class BankAccountManager implements Bank {
      * Constructor for BankAccountManager that initializes accounts and id.
      */
     public BankAccountManager() {
-        this.accounts = new HashMap();
+        this.accounts = new HashMap<Integer, BankAccount>();
         this.id = 0;
     }
 
