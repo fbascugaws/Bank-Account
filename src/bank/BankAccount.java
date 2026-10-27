@@ -41,6 +41,10 @@ public class BankAccount {
      * Deposits money into the account.
      *
      * @param amount the amount to deposit
+     * @throws InvalidAmountException if the amount deposited is less than
+     *                                 or equal to zero
+     * @throws AccountFrozenException if deposit is attempted while account
+     *                                 is frozen
      */
     public void deposit(double amount) 
         throws InvalidAmountException, AccountFrozenException {
@@ -71,6 +75,12 @@ public class BankAccount {
      * Withdraws money from the account.
      * 
      * @param amount the amount to withdraw
+     * @throws InvalidAmountException if the amount wthdrawn is less than
+     *                                 or equal to zero
+     * @throws InsufficientFundsException if the amount withdrawn is greater than
+     *                                 the available balance
+     * @throws AccountFrozenException if deposit is attempted while account
+     *                                 is frozen
      */
     public void withdraw(double amount) 
             throws InvalidAmountException, InsufficientFundsException, 
