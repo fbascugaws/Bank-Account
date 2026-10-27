@@ -77,8 +77,8 @@ public class BankAccount {
      * @param amount the amount to withdraw
      * @throws InvalidAmountException if the amount wthdrawn is less than
      *                                 or equal to zero
-     * @throws InsufficientFundsException if the amount withdrawn is greater than
-     *                                 the available balance
+     * @throws InsufficientFundsException if the amount withdrawn is greater
+     *                                 than the available balance
      * @throws AccountFrozenException if deposit is attempted while account
      *                                 is frozen
      */
@@ -122,7 +122,8 @@ public class BankAccount {
      * @param header description of list
      * @param transactions transactions to print
      */
-    public void printTransactions(String header, List<Transaction> transactions) {
+    public void printTransactions(String header, 
+            List<Transaction> transactions) {
         System.out.println(header);
         for (Transaction t : transactions) {
             System.out.println(t);
