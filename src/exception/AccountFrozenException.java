@@ -1,5 +1,12 @@
 package exception;
 
+/** 
+ * AccountFrozenException
+ * Exception class for handling transactions with a frozen account.
+ * 
+ * @author Felisa Bascug
+ */
+
 public class AccountFrozenException extends Exception {
     private String message;
     

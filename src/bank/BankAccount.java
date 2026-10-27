@@ -23,8 +23,8 @@ public class BankAccount {
     public static final String INSUFFICIENT_FUNDS = "Insufficient balance.";
 
     /**
-     * Constructor for BankAccount that initializes the balance and frozen
-     * status.
+     * Constructor for BankAccount that initializes the balance 
+     * and frozen status.
      * Default balance is set to 0 and the account is not frozen.
      * ArrayList is initialized to store the transaction history.
      */

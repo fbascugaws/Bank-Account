@@ -1,8 +1,6 @@
 package bank;
 
-import exception.AccountFrozenException;
-import exception.InsufficientFundsException;
-import exception.InvalidAmountException;
+import exception.*;
 
 /**
  * Main

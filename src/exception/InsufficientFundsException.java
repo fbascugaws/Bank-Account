@@ -2,6 +2,8 @@ package exception;
 
 /**
  * InsufficientFundsException
+ * Exception class for handling withdrawal transactions 
+ * with insufficient funds.
  * 
  * @author Felisa Bascug
  */

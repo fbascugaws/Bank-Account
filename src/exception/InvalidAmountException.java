@@ -1,5 +1,13 @@
 package exception;
 
+/** 
+ * InvalidAmountException
+ * Exception class for handling deposit/withdrawal transactions 
+ * with an invalid amount.
+ * 
+ * @author Felisa Bascug
+ */
+
 public class InvalidAmountException extends Exception {
     private String message;
     

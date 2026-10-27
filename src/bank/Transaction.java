@@ -30,8 +30,9 @@ public class Transaction {
     }
 
     /**
-     * TODO
-     * @return
+     * Returns the amount deposited or withdrawn during the transaction.
+     * 
+     * @return the amount involved in the transaction
      */
     public double getAmount() {
         return amount;
